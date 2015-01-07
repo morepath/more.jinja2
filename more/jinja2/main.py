@@ -21,6 +21,8 @@ def get_jinja2_render(path, original_render, settings):
     config = settings.jinja2.__dict__
     # XXX creates a new environment and loader each time,
     # which could slow startup somewhat
+    # XXX and probably breaks caching if you have one template inherit
+    # from another
     dirpath, filename = os.path.split(path)
     environment = jinja2.Environment(
         loader=jinja2.FileSystemLoader(dirpath),
