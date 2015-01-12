@@ -2,7 +2,7 @@ import morepath
 import more.jinja2
 from webtest import TestApp as Client
 import pytest
-from .fixtures import template, template_inheritance
+from .fixtures import template, template_inheritance, override_template
 
 
 def setup_module(module):
@@ -21,6 +21,33 @@ def test_template():
 <html>
 <body>
 <p>Hello world!</p>
+</body>
+</html>'''
+
+
+def test_override_template():
+    config = morepath.setup()
+    config.scan(more.jinja2, ignore=['.tests'])
+    config.scan(override_template)
+    config.commit()
+
+    c = Client(override_template.App())
+
+    response = c.get('/persons/world')
+    assert response.body == b'''\
+<html>
+<body>
+<p>Hello world!</p>
+</body>
+</html>'''
+
+    c = Client(override_template.SubApp())
+
+    response = c.get('/persons/world')
+    assert response.body == b'''\
+<html>
+<body>
+<p>Hi world!</p>
 </body>
 </html>'''
 
