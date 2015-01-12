@@ -11,23 +11,29 @@ class Jinja2App(morepath.App):
 def get_setting_section():
     return {
         'auto_reload': False,
-        'autoescape': True,
-        'extensions': ['jinja2.ext.autoescape']
     }
 
 
-@Jinja2App.template_engine(extension='.jinja2')
-def get_jinja2_render(path, original_render, settings):
-    config = settings.jinja2.__dict__
-    # XXX creates a new environment and loader each time,
-    # which could slow startup somewhat
-    # XXX and probably breaks caching if you have one template inherit
-    # from another
-    dirpath, filename = os.path.split(path)
-    environment = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(dirpath),
+@Jinja2App.template_loader(extension='.jinja2')
+def get_jinja2_loader(template_directories, settings):
+    config = settings.jinja2.__dict__.copy()
+
+    # we always want to use autoescape as this is about
+    # HTML templating
+    config.update({
+        'autoescape': True,
+        'extensions': ['jinja2.ext.autoescape']
+    })
+
+    return jinja2.Environment(
+        loader=jinja2.FileSystemLoader(template_directories),
         **config)
-    template = environment.get_template(filename)
+
+
+@Jinja2App.template_render(extension='.jinja2')
+def get_jinja2_render(loader, name, original_render):
+    template = loader.get_template(name)
+
     def render(content, request):
         variables = {'request': request}
         variables.update(content)
