@@ -19,11 +19,15 @@ Example usage::
        def __init__(self, name):
            self.name = name
 
+  @App.template_directory()
+  def get_template_directory():
+      return 'templates'
+
   @App.html(model=Person, template='person.jinja2')
   def person_default(self, request):
       return {'name': self.name}
 
-and then in ``person.jinja2`` (in the same directory as the module)::
+and then in ``person.jinja2`` (in the ``templates`` subdirectory)::
 
   <html>
   <body>
@@ -45,7 +49,8 @@ in your app. For instance::
         'extensions': ['jinja2.ext.autoescape']
       }
 
-For details on Jinja2 configuration options, consult the `Jinja2 API documentation`_.
+For details on Jinja2 configuration options, consult the `Jinja2 API
+documentation`_.
 
 .. _Morepath: http://morepath.readthedocs.org
 
