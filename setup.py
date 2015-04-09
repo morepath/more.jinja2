@@ -7,7 +7,7 @@ long_description = (
     io.open('CHANGES.txt', encoding='utf-8').read())
 
 setup(name='more.jinja2',
-      version='0.1.dev0',
+      version='0.1',
       description="Jinja2 template integration for Morepath",
       long_description=long_description,
       author="Martijn Faassen",
