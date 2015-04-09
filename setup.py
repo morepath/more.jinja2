@@ -21,7 +21,7 @@ setup(name='more.jinja2',
       zip_safe=False,
       install_requires=[
         'setuptools',
-        'morepath > 0.9',
+        'morepath >= 0.10',
         'Jinja2 >= 2.7.3'
         ],
       extras_require = dict(
