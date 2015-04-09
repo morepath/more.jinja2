@@ -4,8 +4,7 @@ CHANGES
 0.2 (unreleased)
 ================
 
-- Nothing changed yet.
-
+- Actual release to PyPI.
 
 0.1 (2015-04-09)
 ================
