@@ -1,4 +1,4 @@
-more.jina2: Jinja2 template integration for Morepath
+more.jinja2: Jinja2 template integration for Morepath
 ====================================================
 
 ``more.jinja2`` is an extension for Morepath_ that adds Jinja2_
