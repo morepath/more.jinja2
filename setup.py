@@ -1,10 +1,10 @@
-import os, io
+import io
 from setuptools import setup, find_packages
 
-long_description = (
-    io.open('README.rst', encoding='utf-8').read()
-    + '\n' +
-    io.open('CHANGES.txt', encoding='utf-8').read())
+long_description = '\n'.join((
+    io.open('README.rst', encoding='utf-8').read(),
+    io.open('CHANGES.txt', encoding='utf-8').read()
+))
 
 setup(name='more.jinja2',
       version='0.3.dev0',
@@ -24,7 +24,7 @@ setup(name='more.jinja2',
         'morepath >= 0.10',
         'Jinja2 >= 2.7.3'
         ],
-      extras_require = dict(
+      extras_require=dict(
         test=['pytest >= 2.6.0',
               'pytest-cov',
               'WebTest'],
