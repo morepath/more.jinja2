@@ -1,4 +1,3 @@
-import os
 import morepath
 import jinja2
 
