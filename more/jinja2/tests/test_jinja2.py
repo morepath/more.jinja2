@@ -1,7 +1,5 @@
 import morepath
-import more.jinja2
 from webtest import TestApp as Client
-import pytest
 from .fixtures import (
     template, template_inheritance, override_template,
     override_template_inheritance)
@@ -12,10 +10,6 @@ def setup_module(module):
 
 
 def test_template():
-    config = morepath.setup()
-    config.scan(more.jinja2, ignore=['.tests'])
-    config.scan(template)
-    config.commit()
     c = Client(template.App())
 
     response = c.get('/persons/world')
@@ -28,11 +22,6 @@ def test_template():
 
 
 def test_override_template():
-    config = morepath.setup()
-    config.scan(more.jinja2, ignore=['.tests'])
-    config.scan(override_template)
-    config.commit()
-
     c = Client(override_template.App())
 
     response = c.get('/persons/world')
@@ -55,10 +44,6 @@ def test_override_template():
 
 
 def test_template_inheritance():
-    config = morepath.setup()
-    config.scan(more.jinja2, ignore=['.tests'])
-    config.scan(template_inheritance)
-    config.commit()
     c = Client(template_inheritance.App())
 
     response = c.get('/persons/world')
@@ -75,10 +60,6 @@ def test_template_inheritance():
 
 
 def test_override_template_inheritance():
-    config = morepath.setup()
-    config.scan(more.jinja2, ignore=['.tests'])
-    config.scan(override_template_inheritance)
-    config.commit()
     c = Client(override_template_inheritance.App())
 
     response = c.get('/persons/world')
