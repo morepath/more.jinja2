@@ -20,6 +20,15 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
+    classifiers=[
+        "License :: OSI Approved :: BSD License",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+    ],
     install_requires=[
         'setuptools',
         'morepath >= 0.15',
