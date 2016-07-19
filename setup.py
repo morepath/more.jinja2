@@ -22,7 +22,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'morepath >= 0.10',
+        'morepath >= 0.15',
         'Jinja2 >= 2.7.3',
     ],
     extras_require=dict(
