@@ -15,7 +15,7 @@ setup(
     author_email="faassen@startifact.com",
     keywords='morepath jinja2',
     license="BSD",
-    url="http://pypi.python.org/pypi/more.jinja2",
+    url="https://github.com/morepath/more.jinja2",
     namespace_packages=['more'],
     packages=find_packages(),
     include_package_data=True,
