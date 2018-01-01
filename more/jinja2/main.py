@@ -16,6 +16,12 @@ def get_setting_section():
 @Jinja2App.template_loader(extension='.jinja2')
 def get_jinja2_loader(template_directories, settings):
     config = settings.jinja2.__dict__.copy()
+    _globals = config.pop('globals', {})
+    _models = config.pop('models', {})
+
+    _globals.update({
+        model.__name__: model for model in _models
+    })
 
     # we always want to use autoescape as this is about
     # HTML templating
@@ -24,9 +30,11 @@ def get_jinja2_loader(template_directories, settings):
         'extensions': ['jinja2.ext.autoescape']
     })
 
-    return jinja2.Environment(
+    env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(template_directories),
         **config)
+    env.globals.update(_globals)
+    return env
 
 
 @Jinja2App.template_render(extension='.jinja2')
