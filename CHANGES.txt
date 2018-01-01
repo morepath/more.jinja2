@@ -8,7 +8,7 @@ CHANGES
 
 - Set up integration with Travis CI.
 
-- Added Tox environments for Python 3.3 and 3.5, PyPy 3, PEP8.
+- Added Tox environments for Python 3.5 and 3.6, PyPy 3, PEP8.
 
 - Using Python 3.5 for PEP8 and coverage.
 
