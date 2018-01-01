@@ -1,6 +1,9 @@
 more.jinja2: Jinja2 template integration for Morepath
 ====================================================
 
+.. image:: https://travis-ci.org/morepath/more.jinja2.svg?branch=master
+    :target: https://travis-ci.org/morepath/more.jinja2
+
 ``more.jinja2`` is an extension for Morepath_ that adds Jinja2_
 template support when you use the ``.jinja2`` extension.
 
