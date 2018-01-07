@@ -31,10 +31,11 @@ def get_jinja2_loader(template_directories, settings):
 
 @Jinja2App.template_render(extension='.jinja2')
 def get_jinja2_render(loader, name, original_render):
-    template = loader.get_template(name)
 
     def render(content, request):
+        template = loader.get_template(name)
         variables = {'request': request}
         variables.update(content)
         return original_render(template.render(**variables), request)
+
     return render
