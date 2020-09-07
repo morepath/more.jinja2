@@ -6,7 +6,7 @@ class App(Jinja2App):
 
 
 @App.path(path="persons/{name}")
-class Person(object):
+class Person:
     def __init__(self, name):
         self.name = name
 

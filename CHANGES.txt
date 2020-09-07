@@ -4,6 +4,8 @@ CHANGES
 0.3 (unreleased)
 ================
 
+- Apply `pyupgrade --py36-plus`
+
 - Use black code formatter.
 
 - Add support for Python 3.7 and 3.8.
