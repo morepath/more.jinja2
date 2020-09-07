@@ -4,6 +4,16 @@ CHANGES
 0.3 (unreleased)
 ================
 
+- Apply `pyupgrade --py36-plus`
+
+- Use black code formatter.
+
+- Add support for Python 3.7 and 3.8.
+
+- Fix test collection.
+
+- Drop support for Python 2.7, 3.4, 3.5.
+
 - Updated the test suite to work with Morepath 0.15.
 
 - Set up integration with Travis CI.
