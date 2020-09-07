@@ -5,7 +5,7 @@ class App(Jinja2App):
     pass
 
 
-@App.path(path='persons/{name}')
+@App.path(path="persons/{name}")
 class Person(object):
     def __init__(self, name):
         self.name = name
@@ -13,9 +13,9 @@ class Person(object):
 
 @App.template_directory()
 def get_template_dir():
-    return 'templates'
+    return "templates"
 
 
-@App.html(model=Person, template='person.jinja2')
+@App.html(model=Person, template="person.jinja2")
 def person_default(self, request):
-    return {'name': self.name}
+    return {"name": self.name}

@@ -1,22 +1,24 @@
 import io
 from setuptools import setup, find_packages
 
-long_description = '\n'.join((
-    io.open('README.rst', encoding='utf-8').read(),
-    io.open('CHANGES.txt', encoding='utf-8').read()
-))
+long_description = "\n".join(
+    (
+        io.open("README.rst", encoding="utf-8").read(),
+        io.open("CHANGES.txt", encoding="utf-8").read(),
+    )
+)
 
 setup(
-    name='more.jinja2',
-    version='0.3.dev0',
+    name="more.jinja2",
+    version="0.3.dev0",
     description="Jinja2 template integration for Morepath",
     long_description=long_description,
     author="Martijn Faassen",
     author_email="faassen@startifact.com",
-    keywords='morepath jinja2',
+    keywords="morepath jinja2",
     license="BSD",
     url="https://github.com/morepath/more.jinja2",
-    namespace_packages=['more'],
+    namespace_packages=["more"],
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
@@ -28,16 +30,6 @@ setup(
         "Programming Language :: Python :: 3.8",
     ],
     python_requires=">=3.6",
-    install_requires=[
-        'setuptools',
-        'morepath >= 0.15',
-        'Jinja2 >= 2.7.3',
-    ],
-    extras_require=dict(
-        test=[
-            'pytest >= 2.6.0',
-            'pytest-cov',
-            'WebTest',
-        ],
-    ),
+    install_requires=["setuptools", "morepath >= 0.15", "Jinja2 >= 2.7.3"],
+    extras_require=dict(test=["pytest >= 2.6.0", "pytest-cov", "WebTest"]),
 )
