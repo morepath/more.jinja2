@@ -8,7 +8,7 @@ CHANGES
 
 - Use black code formatter.
 
-- Add support for Python 3.7 and 3.8.
+- Add support for Python 3.7, 3.8 and 3.9.
 
 - Fix test collection.
 
@@ -16,13 +16,15 @@ CHANGES
 
 - Updated the test suite to work with Morepath 0.15.
 
-- Set up integration with Travis CI.
+- Set up integration with Travis CI. (superseded)
 
-- Added Tox environments for Python 3.5 and 3.6, PyPy 3, PEP8.
+- Added Tox environments for Python 3.5 and 3.6, PyPy 3, PEP8. (partially superseded)
 
-- Using Python 3.5 for PEP8 and coverage.
+- Using Python 3.5 for PEP8 and coverage. (superseded)
 
 - Clean up meta data.
+
+- Use GitHub Actions for CI.
 
 0.2 (2015-04-09)
 ================
