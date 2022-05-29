@@ -4,7 +4,7 @@ CHANGES
 0.3 (2022-05-29)
 ================
 
-- Apply `pyupgrade --py36-plus`
+- Apply ``pyupgrade --py36-plus``
 
 - Use black code formatter.
 
