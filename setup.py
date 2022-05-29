@@ -28,8 +28,9 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
     python_requires=">=3.6",
     install_requires=["setuptools", "morepath >= 0.15", "Jinja2 >= 2.9"],
-    extras_require=dict(test=["pytest >= 2.6.0", "pytest-cov", "WebTest"]),
+    extras_require=dict(test=["pytest >= 7", "pytest-cov", "WebTest"]),
 )
