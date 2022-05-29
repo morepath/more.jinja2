@@ -60,7 +60,6 @@ in your app. For instance::
       return {
         'auto_reload': False,
         'autoescape': True,
-        'extensions': ['jinja2.ext.autoescape']
       }
 
 For details on Jinja2 configuration options, consult the `Jinja2 API

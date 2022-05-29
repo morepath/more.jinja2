@@ -26,6 +26,9 @@ CHANGES
 
 - Use GitHub Actions for CI.
 
+- Fix Jinja2 integration - the ``autoescape`` extension was removed as now it
+  is built-in.
+
 0.2 (2015-04-09)
 ================
 
