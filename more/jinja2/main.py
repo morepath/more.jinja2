@@ -19,7 +19,7 @@ def get_jinja2_loader(template_directories, settings):
 
     # we always want to use autoescape as this is about
     # HTML templating
-    config.update({"autoescape": True, "extensions": ["jinja2.ext.autoescape"]})
+    config.update({"autoescape": True})
 
     return jinja2.Environment(
         loader=jinja2.FileSystemLoader(template_directories), **config
