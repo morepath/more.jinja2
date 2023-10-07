@@ -1,0 +1,39 @@
+[tool.black]
+line-length = 80
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.tox
+    | \.venv
+    | __pypackages__
+    | build
+    | dist
+    | env
+    | venv
+  )/
+)
+'''
+
+[tool.pytest.ini_options]
+testpaths = "more"
+addopts = "-v"
+filterwarnings = [
+    'ignore:.*pkg_resources.*:DeprecationWarning',
+]
+
+[tool.coverage.run]
+source = ["more.jinja2"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.isort]
+profile = 'black'
+py_version = 39
+skip_gitignore = true
+
+[tool.zest-releaser]
+create-wheel = true
