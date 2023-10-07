@@ -32,5 +32,13 @@ setup(
     ],
     python_requires=">=3.6",
     install_requires=["setuptools", "morepath >= 0.15", "Jinja2 >= 2.9"],
-    extras_require=dict(test=["pytest >= 7", "pytest-cov", "WebTest"]),
+    extras_require=dict(
+        test=["pytest >= 7", "pytest-cov", "WebTest"],
+        lint=[
+            "black == 23.9.1",
+            "flake8 == 6.1.0",
+            "pyupgrade == 3.14.0",
+            "isort == 5.12.0",
+        ],
+    ),
 )
