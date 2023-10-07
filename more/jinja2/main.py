@@ -1,5 +1,5 @@
-import morepath
 import jinja2
+import morepath
 
 
 class Jinja2App(morepath.App):
