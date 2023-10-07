@@ -1,9 +1,10 @@
 from webtest import TestApp as Client
+
 from .fixtures import (
-    template,
-    template_inheritance,
     override_template,
     override_template_inheritance,
+    template,
+    template_inheritance,
 )
 
 
