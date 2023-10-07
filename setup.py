@@ -24,13 +24,13 @@ setup(
     classifiers=[
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     install_requires=["setuptools", "morepath >= 0.15", "Jinja2 >= 2.9"],
     extras_require=dict(
         test=["pytest >= 7", "pytest-cov", "WebTest"],
