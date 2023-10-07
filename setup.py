@@ -9,7 +9,7 @@ long_description = "\n".join(
 
 setup(
     name="more.jinja2",
-    version="0.3.dev0",
+    version="0.4.dev0",
     description="Jinja2 template integration for Morepath",
     long_description=long_description,
     author="Martijn Faassen",
