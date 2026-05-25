@@ -12,52 +12,41 @@ def test_template():
     c = Client(template.App())
 
     response = c.get("/persons/world")
-    assert (
-        response.body
-        == b"""\
+    assert response.body == b"""\
 <html>
 <body>
 <p>Hello world!</p>
 </body>
 </html>"""
-    )
 
 
 def test_override_template():
     c = Client(override_template.App())
 
     response = c.get("/persons/world")
-    assert (
-        response.body
-        == b"""\
+    assert response.body == b"""\
 <html>
 <body>
 <p>Hello world!</p>
 </body>
 </html>"""
-    )
 
     c = Client(override_template.SubApp())
 
     response = c.get("/persons/world")
-    assert (
-        response.body
-        == b"""\
+    assert response.body == b"""\
 <html>
 <body>
 <p>Hi world!</p>
 </body>
 </html>"""
-    )
 
 
 def test_template_inheritance():
     c = Client(template_inheritance.App())
 
     response = c.get("/persons/world")
-    assert (
-        response.body
-        == b"""\
+    assert response.body == b"""\
 <html>
 <head>
 </head>
@@ -67,16 +56,13 @@ def test_template_inheritance():
 </div>
 </body>
 </html>"""
-    )
 
 
 def test_override_template_inheritance():
     c = Client(override_template_inheritance.App())
 
     response = c.get("/persons/world")
-    assert (
-        response.body
-        == b"""\
+    assert response.body == b"""\
 <html>
 <head>
 </head>
@@ -86,14 +72,11 @@ def test_override_template_inheritance():
 </div>
 </body>
 </html>"""
-    )
 
     c = Client(override_template_inheritance.SubApp())
 
     response = c.get("/persons/world")
-    assert (
-        response.body
-        == b"""\
+    assert response.body == b"""\
 <html>
 <head>
 </head>
@@ -103,4 +86,3 @@ def test_override_template_inheritance():
 </div>
 </body>
 </html>"""
-    )
