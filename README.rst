@@ -2,10 +2,7 @@
    :target: https://github.com/morepath/more.jinja2/actions?workflow=CI
    :alt: CI Status
 
-.. image:: https://coveralls.io/repos/github/morepath/more.jinja2/badge.svg?branch=master
-    :target: https://coveralls.io/github/morepath/more.jinja2?branch=master
-
-.. image:: https://img.shields.io/pypi/v/more.jinja2.svg
+\.. image:: https://img.shields.io/pypi/v/more.jinja2.svg
   :target: https://pypi.org/project/more.jinja2/
 
 .. image:: https://img.shields.io/pypi/pyversions/more.jinja2.svg
@@ -13,7 +10,7 @@
 
 
 more.jinja2: Jinja2 template integration for Morepath
-====================================================
+=====================================================
 
 ``more.jinja2`` is an extension for Morepath_ that adds Jinja2_
 template support when you use the ``.jinja2`` extension.
@@ -65,7 +62,7 @@ in your app. For instance::
 For details on Jinja2 configuration options, consult the `Jinja2 API
 documentation`_.
 
-.. _Morepath: http://morepath.readthedocs.org
+.. _Morepath: https://morepath.readthedocs.io
 
 .. _Jinja2: http://jinja.pocoo.org/
 
