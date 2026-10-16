@@ -1,38 +1,30 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# OS metadata
-.DS_STORE
+# Byte-compiled / optimized
+__pycache__
+*.py[co]
 
 # Distribution / packaging
-*.egg-info/
-/build/
-/dist/
+*.egg-info
+/build
+/dist
+pip-wheel-metadata
 
 # Virtualenv
-/env/
-/venv/
-/.venv/
-
-# Buildout
-/bin/
-/develop-eggs/
-/eggs/
-/src/
-/parts/
-/.installed.cfg
-/.mr.developer.cfg
+.venv
+/env
+/venv
 
 # Unit test / coverage reports
-.cache/
-/.coverage
-/htmlcov
-/.tox
+.coverage
+htmlcov
+.tox
+
+# Caches
+.cache
+.*_cache
 
 # Sphinx documentation
-/doc/build/
+/doc/_build
 
 # Editor
 /.vscode
+/.idea

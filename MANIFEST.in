@@ -1,6 +1,3 @@
-include *.txt *.rst *.cfg *.py *.ini
-exclude .installed.cfg
-recursive-include more *.py
-recursive-include tests *.py
-recursive-include doc *.rst Makefile *.py *.bat
-recursive-include more *.jinja2
+include *.rst *.txt
+exclude .githooks/pre-commit
+recursive-include src *.jinja2
