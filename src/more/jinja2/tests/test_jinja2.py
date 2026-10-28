@@ -8,7 +8,7 @@ from .fixtures import (
 )
 
 
-def test_template():
+def test_template() -> None:
     c = Client(template.App())
 
     response = c.get("/persons/world")
@@ -23,7 +23,7 @@ def test_template():
     )
 
 
-def test_override_template():
+def test_override_template() -> None:
     c = Client(override_template.App())
 
     response = c.get("/persons/world")
@@ -51,7 +51,7 @@ def test_override_template():
     )
 
 
-def test_template_inheritance():
+def test_template_inheritance() -> None:
     c = Client(template_inheritance.App())
 
     response = c.get("/persons/world")
@@ -70,7 +70,7 @@ def test_template_inheritance():
     )
 
 
-def test_override_template_inheritance():
+def test_override_template_inheritance() -> None:
     c = Client(override_template_inheritance.App())
 
     response = c.get("/persons/world")
